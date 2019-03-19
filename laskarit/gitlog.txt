@@ -1,0 +1,104 @@
+$  git log --stat | cat
+commit 0658cfec48cb407e0f0ed6beb3f4fe830e9e4277
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:56:51 2019 +0200
+
+    poistaa file1 ja uudelleennimeää file2 file22
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit fedbf1e385a9bc73b69d7df11dfbd6cebc91da11
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:48:42 2019 +0200
+
+    Luo tiedostot file1 file2 file3
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 8d34f9484e84689a8dc7fa5efc35b992f585f872
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:40:30 2019 +0200
+
+    Muutoksia eka.txt ja kolmas.txt
+
+ eka.txt    | 22 ++++++++++++++++++++++
+ kolmas.txt |  1 +
+ 2 files changed, 23 insertions(+)
+
+commit 7e58458d32d2f55d367b12755100ae1e1791f4df
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:37:35 2019 +0200
+
+    Uudelleennimeää tiedosto.txt eka.txt
+
+ tiedosto.txt | 19 -------------------
+ 1 file changed, 19 deletions(-)
+
+commit 76638d50ad1f5b0152da67d532ea3b94d08b46b6
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:36:10 2019 +0200
+
+    Poistaa toinen.txt
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4bb3a74035316b676029a6a21d46d948fe4c0928
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:34:12 2019 +0200
+
+    Muutoksia tiedosto.txt:hen
+
+ tiedosto.txt | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+commit 489d32343288e4cabe09fee0c0ace1bb661e2312
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:32:22 2019 +0200
+
+    Lisää tekstiä tiedosto.txt:hen
+
+ tiedosto.txt | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+
+commit a969c9477478f8c83f8350f2b3a2a50bedeee505
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:22:53 2019 +0200
+
+    lisää jokintiedosto.txt
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e1e95f8e2a9cb7efb0625e2b7664565c79d703e4
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:22:01 2019 +0200
+
+    lisää kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c50254ba564cc255541dddd02073bcce300d2c6a
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:19:22 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 83303696f0fc38df2e110790c213bb6e01bd0717
+Author: Kristian Krok <grimstick@users.noreply.github.com>
+Date:   Tue Mar 19 12:17:09 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
