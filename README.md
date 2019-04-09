@@ -1,6 +1,4 @@
 # Ohjelmistotekniikka, harjoitustyö :atom_symbol:
-## Tehtävät
-
 ## Dokumentaatio
 * [tuntikirjanpito](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 * [vaatimusmäärittely](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
