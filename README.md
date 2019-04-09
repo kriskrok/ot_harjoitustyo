@@ -39,7 +39,7 @@ generoi hakemistoon _target_ suoritettavan jar-tiedoston _Itemexchange-1.0-SNAPS
 
 ### Checkstyle
 
-Tiedostoon [Tavaranvaihtosovellus/checkstyle.xml](https://github.com/kriskrok/ot_harjoitustyo/blob/master/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla
+Tiedostoon [checkstyle.xml](https://github.com/kriskrok/ot_harjoitustyo/blob/master/Tavaranvaihtosovellus/checkstyle.xml) määrittelemät tarkistukset suoritetaan komennolla
 
 ```
  mvn jxr:jxr checkstyle:checkstyle
