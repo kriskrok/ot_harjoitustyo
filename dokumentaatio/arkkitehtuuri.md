@@ -1,1 +1,1 @@
-![Arkkitehtuurikuvaus](dokumentaatio/kuvat/a-1.svg)
+![Arkkitehtuurikuvaus](kuvat/a-1.svg)
