@@ -3,10 +3,15 @@
 
 ## Dokumentaatio
 * [tuntikirjanpito](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
-* [Vaatimusmäärittely](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
-* [Arkkitehtuurikuvaus](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+* [vaatimusmäärittely](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+* [arkkitehtuurikuvaus](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 ## Komentorivitoiminnot
+
+Ohjelman voi suorittaa pääkansiossa komennolla
+```
+mvn compile exec:java -Dexec.mainClass=itemexchange.ui.Main
+```
 
 ### Testaus
 
