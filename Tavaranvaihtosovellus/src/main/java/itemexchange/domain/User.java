@@ -10,6 +10,10 @@ public class User {
         this.username = username;
     }
     
+    public String getName() {
+        return this.name;
+    }
+    
     @Override
     public String toString() {
         return username;

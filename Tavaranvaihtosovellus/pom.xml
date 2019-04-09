@@ -32,6 +32,12 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.0</version>
+		<configuration>
+	            <excludes>
+           		 <exclude>itemexchange/ui/ItemexchangeUi*</exclude>
+			 <exclude>itemexchange/ui/TextInterface.class</exclude>
+	            </excludes>
+	        </configuration>
                 <executions>
                     <execution>
                         <id>default-prepare-agent</id>
