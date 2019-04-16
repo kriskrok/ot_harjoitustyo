@@ -1,22 +1,25 @@
 package itemexchange.domain;
 
-public class User {
+import java.util.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class User extends AbstractPersistable<Long> {
     private String name;
     private String username;
+    private String password;
     
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
+    private List<Item> items = new ArrayList<>();
     
-    public User(String name, String username) {
-        this.name = name;
-        this.username = username;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
-    
-    @Override
-    public String toString() {
-        return username;
-    }
     
 }

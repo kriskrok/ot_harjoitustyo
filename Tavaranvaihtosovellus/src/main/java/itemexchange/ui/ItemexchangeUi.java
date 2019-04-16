@@ -1,5 +1,6 @@
 package itemexchange.ui;
 
+import itemexchange.domain.ItemExchangeService;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -26,12 +27,11 @@ import javafx.stage.Stage;
 
 public class ItemexchangeUi extends Application {
 
-    static final String USER = "Matti";
-    static final String PASSWD = "Maija";
+    private ItemExchangeService itemExchangeService;
 
     @Override
     public void init() {
-
+        itemExchangeService = new ItemExchangeService();
     }
 
     @Override
@@ -100,9 +100,9 @@ public class ItemexchangeUi extends Application {
             public void handle(ActionEvent event) {
                 String checkUser = txtUserName.getText().toString();
                 String checkPw = pf.getText().toString();
-                System.out.println("User: " + checkUser + "\nPassword: " + checkPw);
+                
 
-                if (checkUser.equalsIgnoreCase(USER) && checkPw.equalsIgnoreCase(PASSWD)) {
+                if (itemExchangeService.checkCredentials(checkUser, checkPw)) {
                     lblMessage.setText("");
                     primaryStage.setScene(userView());
                 } else {

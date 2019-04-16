@@ -1,4 +1,8 @@
 # Ohjelmistotekniikka, harjoitustyö :atom_symbol:
+
+## Tavaranvaihtosovellus
+Sovellus on tavaranvaihtosovellus jonka avulla käyttäjät voivat vaihtaa tavaroitaan toisten käyttäjien tavaroihin. Käyttäjä voi lisätä ja poistaa omia tavaroitaan sekä katsella muiden käyttäjien tavaroita. Löydettyään itseään kiinnostavan tavaran käyttäjä voi ehdottaa vaihtoa johonkin omaan tavaraansa. Sovellusta voi käyttää useampi rekisteröitynyt käyttäjä joilla jokaisella on omat palveluun lisäämät tavaransa.
+
 ## Dokumentaatio
 * [tuntikirjanpito](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 * [vaatimusmäärittely](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
@@ -8,7 +12,7 @@
 
 Ohjelman voi suorittaa pääkansiossa komennolla
 ```
-mvn compile exec:java -Dexec.mainClass=itemexchange.ui.Main
+mvn compile exec:java -Dexec.mainClass=itemexchange.Main
 ```
 
 ### Testaus
@@ -35,7 +39,7 @@ Komento
 mvn package
 ```
 
-generoi hakemistoon _target_ suoritettavan jar-tiedoston _Itemexchange-1.0-SNAPSHOT.jar_
+generoi hakemistoon _target_ suoritettavan jar-tiedoston _original-Itemexchange-1.0-SNAPSHOT.jar_
 
 ### Checkstyle
 

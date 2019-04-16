@@ -1,34 +1,54 @@
 package itemexchange.ui;
 
-import itemexchange.domain.Inventory;
-import itemexchange.domain.Item;
+import itemexchange.domain.ItemExchangeService;
 import itemexchange.domain.User;
+import itemexchange.domain.Item;
+import itemexchange.Main;
+import itemexchange.domain.Inventory;
+import itemexchange.persistence.ItemRepository;
+import itemexchange.persistence.UserRepository;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class TextInterface {
 
-    private Scanner reader;
-    private Inventory inventory;
+    private Scanner reader = new Scanner(System.in);
+    private Inventory inventory = new Inventory();
 
-    public TextInterface(Scanner reader) {
-        this.reader = reader;
-        this.inventory = new Inventory();
-    }
+    @Autowired
+    private ItemExchangeService itemExchangeService;
+    
+    @Autowired(required = true)
+    private UserRepository userRepository;
 
     public void start() {
-        User matti = new User("Matti", "Masa");
+        /*
+        User matti = new User();
+        matti.setName("Matti");
+        matti.setUsername("Masa");
+        
+        
 
-        Item item1 = new Item("Mug", matti);
+        Item item1 = new Item();
+        item1.setName("Mug");
+        item1.setOwner(matti);
+        
         Item item2 = new Item("Holy Grail", matti);
         Item item3 = new Item("Shiny Bauble", matti);
-
-        inventory.addItem(item1, matti.getName());
-        inventory.addItem(item2, matti.getName());
-        inventory.addItem(item3, matti.getName());
+        
+        itemExchangeService.saveItem(item1);
+        itemExchangeService.saveUser(matti);
+        itemExchangeService.saveItem(item2);
+        itemExchangeService.saveItem(item3);
+        */
 
         printWelcomeMessage();
         while (true) {
@@ -39,6 +59,7 @@ public class TextInterface {
             }
             executeCommand(input);
         }
+        
         System.out.println(printFarewellMessage());
     }
 
@@ -52,7 +73,7 @@ public class TextInterface {
                 System.out.println("input was 2");
                 break;
             case "3":
-                System.out.println("input was 3");
+                itemExchangeService.countUsers();
                 break;
             case "4":
                 try {

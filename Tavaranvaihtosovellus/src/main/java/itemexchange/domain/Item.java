@@ -1,13 +1,24 @@
 package itemexchange.domain;
 
-public class Item {
-    public String name;
-    public User owner;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.jpa.domain.AbstractPersistable;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Item extends AbstractPersistable<Long> {
+    private String name;
     
-    public Item(String name, User owner) {
-        this.name = name;
-        this.owner = owner;
-    }
+    @ManyToOne(cascade = {javax.persistence.CascadeType.ALL})
+    private User owner;
+    
     
     @Override
     public String toString() {

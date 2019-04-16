@@ -37,7 +37,7 @@ public class TextInterfaceTest {
     // public void hello() {}
     @Test
     public void farewellMessagePrintsCorrectly() {
-        TextInterface iface = new TextInterface(new Scanner("5"));
+        TextInterface iface = new TextInterface();
         assertEquals("So long, and thanks for all the fish!", iface.printFarewellMessage());
         
     }
