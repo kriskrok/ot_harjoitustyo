@@ -8,6 +8,10 @@ Sovellus on tavaranvaihtosovellus jonka avulla käyttäjät voivat vaihtaa tavar
 * [vaatimusmäärittely](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [arkkitehtuurikuvaus](https://github.com/kriskrok/ot_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+## Releaset
+
+[Viikko 5](https://github.com/kriskrok/ot_harjoitustyo/releases/tag/viikko5)
+
 ## Komentorivitoiminnot
 
 Ohjelman voi suorittaa pääkansiossa komennolla
