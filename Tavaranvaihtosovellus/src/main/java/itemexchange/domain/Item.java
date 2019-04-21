@@ -6,8 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.AbstractPersistable;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -16,13 +15,13 @@ import org.hibernate.annotations.CascadeType;
 public class Item extends AbstractPersistable<Long> {
     private String name;
     
-    @ManyToOne(cascade = {javax.persistence.CascadeType.ALL})
+    @ManyToOne(cascade = {CascadeType.ALL})
     private User owner;
     
     
     @Override
     public String toString() {
-        return "'" + name + "'" + " listed by: " + owner;
+        return "'" + name + "'" + " listed by: " + owner.getName();
     }
     
 }

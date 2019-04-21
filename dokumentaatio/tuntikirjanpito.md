@@ -6,6 +6,8 @@
 | 9.4. | 12 | Ensiaskeleet javaFX:n ihmeelliseen maailmaan, Inventory-luokan lisäys ja tästä seurannut refraktorointi, checkstyle käyttöön ja lisää testikattavuutta |
 | 15.4 | 6 | Spring -sovelluskehyksen pohdintaa ja asetuksien ihmettelyä. Olisiko spring-ilman web-komponenttia passeli omiin tietokannanhallinattarpeisiin  |
 | 16.4 | 13 | Kohtuuton määrä turhautumista ja hukattua aikaa ihmetellen miksi Spring-annotaatiot eivät toimi,  muuta ei sitten juur kerennytkään tehdä |
-| yht | 37 | |
+| 20.4 | 4 | Spring -savotta osa2 -NPE ihmettelyä; jostain syystä Controller ei herää henkiin SpringApplication -bootin yhteydessä |
+| 21.4 | 6 | Lisää pään seinään hakkaamista Spring:in kanssa. Tietokantayhteydet heräsivät henkiin jonka jälkeen totuus aiheesta kuinka vatussa Spring ja JavaFx saadaa komppaamaan toisiaan vei elämänhalun |
+| yht | 47 | |
 
 ![Image of Baracktocat](https://octodex.github.com/images/baracktocat.jpg)

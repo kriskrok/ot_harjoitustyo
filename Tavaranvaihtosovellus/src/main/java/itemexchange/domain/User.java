@@ -3,6 +3,7 @@ package itemexchange.domain;
 import java.util.*;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,8 +19,8 @@ public class User extends AbstractPersistable<Long> {
     private String username;
     private String password;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
-    private List<Item> items = new ArrayList<>();
+    @OneToMany(/*fetch = FetchType.EAGER, */cascade = CascadeType.ALL, mappedBy = "owner")
+    private Set<Item> items = new HashSet<>();
     
     
 }

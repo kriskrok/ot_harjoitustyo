@@ -13,7 +13,6 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 
@@ -29,25 +28,33 @@ public class TextInterface {
     @Autowired(required = true)
     private UserRepository userRepository;
 
-    public void start() {
+    public void start() throws Exception {
+        credentialEnquiry();
         /*
         User matti = new User();
         matti.setName("Matti");
         matti.setUsername("Masa");
+        matti.setPassword("Matti");
+        itemExchangeService.saveUser(matti);
         
-        
+        User maija = new User();
+        maija.setName("Maija");
+        maija.setUsername("Maija");
+        maija.setPassword("Maija");
+        itemExchangeService.saveUser(maija);
 
         Item item1 = new Item();
         item1.setName("Mug");
-        item1.setOwner(matti);
         
-        Item item2 = new Item("Holy Grail", matti);
-        Item item3 = new Item("Shiny Bauble", matti);
+        Item item2 = new Item();
+        item2.setName("Holy Grail");
         
-        itemExchangeService.saveItem(item1);
-        itemExchangeService.saveUser(matti);
-        itemExchangeService.saveItem(item2);
-        itemExchangeService.saveItem(item3);
+        Item item3 = new Item();
+        item3.setName("Shiny Bauble");
+        
+        itemExchangeService.createItem("Matti", item1);
+        itemExchangeService.createItem("Matti", item2);
+        itemExchangeService.createItem("Maija",item3);
         */
 
         printWelcomeMessage();
@@ -74,6 +81,10 @@ public class TextInterface {
                 break;
             case "3":
                 itemExchangeService.countUsers();
+                for(Item item : itemExchangeService.getAllItems()) {
+                    System.out.println(item);
+                }
+                
                 break;
             case "4":
                 try {
@@ -122,6 +133,19 @@ public class TextInterface {
         sb.append("> ");
 
         System.out.print(sb.toString());
+    }
+    
+    public void credentialEnquiry() {
+        System.out.println("Hello there!\n");
+        System.out.println("\tKindly provide your username: ");
+        itemExchangeService.setUsername(reader.nextLine());
+        
+        System.out.println("\tAnd your password: ");
+        itemExchangeService.setPassword(reader.nextLine());
+        
+        System.out.println("\tMost obliged.\n");
+        
+        itemExchangeService.printCredentials();
     }
 
     public void printWelcomeMessage() {
