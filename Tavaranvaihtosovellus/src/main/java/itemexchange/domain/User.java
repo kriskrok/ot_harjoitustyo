@@ -1,26 +1,60 @@
 package itemexchange.domain;
 
 import java.util.*;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.jpa.domain.AbstractPersistable;
 
-@Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class User extends AbstractPersistable<Long> {
+public class User {
+    private Integer id;
     private String name;
     private String username;
-    private String password;
+    private String password;    
     
-    @OneToMany(/*fetch = FetchType.EAGER, */cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Item> items = new HashSet<>();
+    
+    public User() {
+        
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(Set<Item> items) {
+        this.items = items;
+    }
+    
+    
     
     
 }

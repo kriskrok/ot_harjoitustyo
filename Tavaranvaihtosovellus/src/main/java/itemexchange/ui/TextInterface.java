@@ -3,59 +3,25 @@ package itemexchange.ui;
 import itemexchange.domain.ItemExchangeService;
 import itemexchange.domain.User;
 import itemexchange.domain.Item;
-import itemexchange.Main;
+import itemexchange.Itemexchange;
 import itemexchange.domain.Inventory;
-import itemexchange.persistence.ItemRepository;
-import itemexchange.persistence.UserRepository;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-
-@Service
 public class TextInterface {
 
     private Scanner reader = new Scanner(System.in);
     private Inventory inventory = new Inventory();
 
-    @Autowired
     private ItemExchangeService itemExchangeService;
     
-    @Autowired(required = true)
-    private UserRepository userRepository;
+    //private UserRepository userRepository;
 
     public void start() throws Exception {
         credentialEnquiry();
-        /*
-        User matti = new User();
-        matti.setName("Matti");
-        matti.setUsername("Masa");
-        matti.setPassword("Matti");
-        itemExchangeService.saveUser(matti);
-        
-        User maija = new User();
-        maija.setName("Maija");
-        maija.setUsername("Maija");
-        maija.setPassword("Maija");
-        itemExchangeService.saveUser(maija);
-
-        Item item1 = new Item();
-        item1.setName("Mug");
-        
-        Item item2 = new Item();
-        item2.setName("Holy Grail");
-        
-        Item item3 = new Item();
-        item3.setName("Shiny Bauble");
-        
-        itemExchangeService.createItem("Matti", item1);
-        itemExchangeService.createItem("Matti", item2);
-        itemExchangeService.createItem("Maija",item3);
-        */
 
         printWelcomeMessage();
         while (true) {
@@ -76,15 +42,11 @@ public class TextInterface {
                 listAllItems();
                 break;
             case "2":
-                Main.launch();
+                Itemexchange.launch();
                 System.out.println("input was 2");
                 break;
             case "3":
-                itemExchangeService.countUsers();
-                for(Item item : itemExchangeService.getAllItems()) {
-                    System.out.println(item);
-                }
-                
+                System.out.println("input was 3");
                 break;
             case "4":
                 try {

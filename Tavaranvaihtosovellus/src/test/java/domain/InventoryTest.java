@@ -32,15 +32,15 @@ public class InventoryTest {
 
     @Before
     public void setUp() {
-        inventory = new Inventory();
-        
-        matti = new User();
-        matti.setName("Matti");
-        matti.setUsername("Masa");
-        
-        item1 = new Item("Mug", matti);
-        item2 = new Item("Holy Grail", matti);
-        item3 = new Item("Shiny Bauble", matti);
+//        inventory = new Inventory();
+//        
+//        matti = new User();
+//        matti.setName("Matti");
+//        matti.setUsername("Masa");
+//        
+//        item1 = new Item("Mug", matti);
+//        item2 = new Item("Holy Grail", matti);
+//        item3 = new Item("Shiny Bauble", matti);
         
 
 //        inventory.addItem(item1, matti.getName());

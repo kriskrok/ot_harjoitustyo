@@ -5,9 +5,6 @@ import itemexchange.domain.Item;
 
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
@@ -40,24 +37,14 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.ConfigurableApplicationContext;
 
-//@Service
-@SpringBootApplication
 public class ItemexchangeUi extends Application {
 
     
-    private ConfigurableApplicationContext context;
-
-    @Autowired
     private ItemExchangeService itemExchangeService;
 
     @Override
     public void init() {
-        SpringApplicationBuilder builder = new SpringApplicationBuilder(ItemexchangeUi.class);
-        context = builder.run(getParameters().getRaw().toArray(new String[0]));
         //itemExchangeService = new ItemExchangeService();
     }
 
@@ -220,9 +207,7 @@ public class ItemexchangeUi extends Application {
         
         
         TableView<Item> table = new TableView<>();
-        List<Item> list = itemExchangeService.getAllItems();
         ArrayList<Item> items1 = new ArrayList<>();
-        items1.addAll(list);
         
         for (Item item : items1) {
             System.out.println(item);
