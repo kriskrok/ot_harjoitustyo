@@ -10,7 +10,9 @@
 | 21.4 | 6 | Lisää pään seinään hakkaamista Spring:in kanssa. Tietokantayhteydet heräsivät henkiin jonka jälkeen totuus aiheesta kuinka vatussa Spring ja JavaFx saadaa komppaamaan toisiaan vei elämänhalun |
 | 22.4 | 3 | Itkua ja spring-sovelluskehyksen repimistä irti. Suurin osa ajasta kuitenkin maven-riippuvuuksien kanssa vääntämistä |
 | 26.4 | 4 | Tietokantayhteyksiä sekä DAO-hahmottelu User- sekä Item- luokille. |
-| Obs. viikon 6 tavoitteista  täyttyne mikään ja repossa olevat dokumentaatiot mallintavat aiempaa viritystä jossa mukana Spring-sovelluskehys. Commit '6264659f00cab6db4c251fa601ae0486a54d7902' sisältää viimeisimmän ei-toiminnallisen tilan mihin asti projekti eteni ennen roskiin joutumistaan |
-| yht | 50 | |
+| 4.5 | 4 | Näkymästä toiseen vaihto Screen-rajapinnan avulla |
+| 5.5 | 12 | Kaikki mitä sovellus pitää sisällään pl. Dao sekä sovelluslogiikkaluokat. Näin minuutteja  ennen viimeiseisen palautuksen kalmanrajaa voinee jo jälkiviisaana todeta että ilman Spring-harharetkeä tämä projekti olisi saattanut päästä maaliin asti |
+| Obs. kaaviot ja muut kilkkeet eivät ole ajantasalla, vaan muistoja ajalta jolloin Spring-sovelluskehys oli vielä iloisesti menossa mukana. Nämä jäivät musertavan kiireen alla päivittämättä |
+| yht | 70 | |
 
 ![Image of Baracktocat](https://octodex.github.com/images/baracktocat.jpg)

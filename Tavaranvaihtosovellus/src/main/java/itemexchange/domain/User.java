@@ -9,10 +9,6 @@ public class User {
     private String password;    
     
     private Set<Item> items = new HashSet<>();
-    
-    public User() {
-        
-    }
 
     public Integer getId() {
         return id;
@@ -52,9 +48,6 @@ public class User {
 
     public void setItems(Set<Item> items) {
         this.items = items;
-    }
-    
-    
-    
+    } 
     
 }

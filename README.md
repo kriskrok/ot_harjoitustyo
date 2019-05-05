@@ -16,7 +16,7 @@ Sovellus on tavaranvaihtosovellus jonka avulla käyttäjät voivat vaihtaa tavar
 
 Ohjelman voi suorittaa pääkansiossa komennolla
 ```
-mvn compile exec:java -Dexec.mainClass=itemexchange.Main
+mvn compile exec:java -Dexec.mainClass=itemexchange.Itemexchange
 ```
 
 ### Testaus
@@ -43,7 +43,14 @@ Komento
 mvn package
 ```
 
-generoi hakemistoon _target_ suoritettavan jar-tiedoston _original-Itemexchange-1.0-SNAPSHOT.jar_
+loitsii hakemistoon _target_ suoritettavan jar-tiedoston _original-Itemexchange-beta.jar_
+
+### JavaDoc
+```
+mvn javadoc:javadoc
+```
+
+löytyypi: _target/site/apidocs/index.html_
 
 ### Checkstyle
 

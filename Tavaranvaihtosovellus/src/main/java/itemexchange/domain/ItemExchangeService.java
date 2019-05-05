@@ -1,43 +1,64 @@
 package itemexchange.domain;
 
-import java.util.*;
-
+import itemexchange.Itemexchange;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ItemExchangeService {
+    
+    static User currentUser;
+    
+    public ItemExchangeService() {
+        initialize();
+    }
+    
+    public boolean checkCredentials(String usrname, String passwd) {
+        User user = Itemexchange.getUserDao().findByCredentials(usrname, passwd);
+        
+        if (user != null) {
+            currentUser = user;
+        }
+        
+        return user != null;
+    }
+    
+    public void printImportantInfo() {
+        try {
+            String importantInfo[] = {
+                "\nMares eat oats",
+                "Does eat oats",
+                "Little lambs eat ivy",
+                "A kid will eat ivy too\n"
+            };
 
-    static String USER = "Matti";
-    static String PASSWD = "Maija";
-    
-    private ItemController itemController;
-    
-    public void setUsername(String username) {
-        USER = username;
+            for (int i = 0; i < importantInfo.length; i++) {
+                System.out.println(importantInfo[i]);
+                Thread.sleep(1000);
+            }
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ItemExchangeService.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
     
-    public void setPassword(String password) {
-        PASSWD = password;
+    public User getCurrentUser() {
+        return currentUser;
     }
     
-    public boolean checkCredentials(String user, String passwd) {
-        return user.equalsIgnoreCase(USER) && passwd.equalsIgnoreCase(PASSWD);
+    private void initialize() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Welcome to itemexchange beta!").append(System.lineSeparator());
+        sb.append("It is currently: ").append(System.lineSeparator());
+        sb.append("\t");
+        sb.append(ZonedDateTime.now().format(DateTimeFormatter.RFC_1123_DATE_TIME));
+        System.out.println(sb.toString());
     }
     
-    public void printCredentials() {
-        System.out.println("User: " + USER + "\nPassword: " + PASSWD + "\n");
+    public void printFarewellMessage() {
+        printImportantInfo();
+        System.out.println("\nSo long, and thanks for all the fish!");
     }
-    
-    public void  /*Item*/ createItem(String ownerUsername, Item item) throws Exception  {
-
-//        return itemController.createItem(ownerUsername, item);
-    }
-    
-//    public void saveItem(Item item) {
-//        try {
-//            itemController.createItem(item.getId(), item);
-//        } catch (Exception exception) {
-//            Logger.getLogger(ItemExchangeService.class.getName()).log(Level.SEVERE, null, exception);
-//        }
-//        
-//    }
 
 }

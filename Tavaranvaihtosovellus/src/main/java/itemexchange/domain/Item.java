@@ -3,7 +3,8 @@ package itemexchange.domain;
 public class Item {
     private Integer id;
     private String name;
-    private User owner;
+    private String description;
+    private Integer ownerId;
     
     public Item() {
     }
@@ -23,13 +24,21 @@ public class Item {
     public void setName(String name) {
         this.name = name;
     }
-
-    public User getOwner() {
-        return owner;
+    
+    public String getDescription() {
+        return description;
     }
 
-    public void setOwner(User owner) {
-        this.owner = owner;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(Integer id) {
+        this.ownerId = id;
     }
     
     //    @Override
